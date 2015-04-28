@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="programming,python,gameover,leoncavallo" />
+    <meta name="description" content="Python Workshop" />
+    <title>Python Workshop - Gameover Room</title>
+    <link rel="stylesheet" href="css/simple.css"/>
+    <link rel="stylesheet" href="css/progressjs.min.css"/>
+  </head>
+  <body>
+    <textarea id="source">
+name: simple
+layout: true
+class: light
+
+---
+# Workshop Python
+
+--
+* link al materiale
+
+
+--
+* link per installare
+
+
+---
+## Programmare
+
+--
+perché?
+
+
+---
+## Linguaggi
+
+--
+* alto / basso livello
+
+
+--
+* compilati / interpretati
+
+
+
+---
+## Python
+
+--
+* interpretato
+
+
+--
+* alto livello
+
+
+---
+## L'interprete
+
+--
+```
+$ python3
+Python 3.4.2 (default, Oct  8 2014, 10:45:20) 
+[GCC 4.9.1] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+--
+Python come calcolatrice:
+
+--
+```python
+>>> 1 + (2 * 3)
+7
+```
+
+---
+## Errori
+
+--
+estremamente comuni
+
+
+--
+vengono segnalati dall'interprete
+
+--
+```python
+>>> 2 / 0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+```
+
+---
+## Variabili
+
+--
+dare un nome alle cose
+
+--
+```python
+>>> x = 6
+>>> 2 * x
+12
+```
+--
+```python
+>>> y = x + 4
+>>> y
+10
+```
+
+
+
+---
+## Funzioni
+
+--
+sequenze di istruzioni
+
+
+--
+con degli ingressi e un'uscita
+
+--
+```python
+>>> abs(-3)
+3
+```
+
+--
+```python
+>>> min(3, 4, 2)
+2
+```
+
+---
+## print()
+
+--
+stampa l'ingresso che gli viene passato
+
+
+--
+```python
+>>> y = 4.2
+>>> print(y)
+4.2
+```
+
+--
+supporta più argomenti
+```python
+>>> print(10, 1 + 2)
+10 2
+```
+
+---
+## Stringhe
+
+--
+altri tipi di dati oltre ai numeri
+
+
+--
+si possono manipolare anche testi
+
+--
+```python
+>>> s = "Hello"
+```
+
+--
+```python
+>>> s + " " + "World"
+"Hello World"
+```
+
+--
+```python
+>>> len("ciao")
+4
+```
+
+---
+## Nota sui diversi tipi
+
+--
+a volte si possono fare operazioni tra tipi diversi
+
+--
+```python
+>>> "abc " * 2
+'abc abc '
+```
+--
+a volte no
+
+--
+```python
+>>> "abc" + 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: Can't convert 'int' object to str implicitly
+```
+
+---
+## Bool
+
+--
+informazione di tipo **Vero** o **Falso**
+
+--
+```python
+>>> 2 < 3
+True
+```
+
+--
+```python
+>>> 5 + 1 == 3
+False
+```
+
+--
+```python
+>>> x = 3 * 2 > len("abc")
+>>> x
+True
+```
+
+---
+## Se-allora-alrimenti
+
+--
+eseguire istruzioni solo se si verificano certe condizioni
+
+--
+```python
+>>> x = 3
+>>> if x > 2:
+...     print(x," è maggiore di 2")
+... elif x == 2:
+...     print(x," è uguale a 2")
+... else:
+...     print(x," è minore di 2")
+... 
+3 è maggiore di 2
+```
+
+--
+per identificare un blocco di codice si usano __4 spazi__
+    </textarea>
+    <script src="js/progress.min.js" type="text/javascript"></script>
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="js/remark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="js/remark.language.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      var slideshow = remark.create({
+        highlightStyle: 'monokai',
+        highlightLanguage: 'remark'
+      }) ;
+      $('.remark-slide-number').hide()
+      var progbar = progressJs(".remark-slides-area");
+      progbar.start();
+      slideshow.on('showSlide', function (slide) {
+        var total = $('.remark-slide-number').html().split(" / ")[1]
+        progbar.set(slide.getSlideNo()/total*100);
+      });
+    });
+    </script>
+  </body>
+</html>
