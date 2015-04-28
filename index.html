@@ -268,6 +268,11 @@ False
 True
 ```
 
+--
+```python
+>>> not (2 < 3)
+False
+```
 
 
 ---
@@ -281,11 +286,41 @@ eseguire istruzioni solo se si verificano certe condizioni
 >>> x = 3
 >>> if x > 2:
 ...     print(x," è maggiore di 2")
+...     print("e la loro differenza è", x-2)
+...
 3 è maggiore di 2
+e la loro differenza è 1
 ```
 
 --
 per identificare un blocco di codice si usano __4 spazi__
+
+--
+### Demo!
+
+---
+## Altrimenti
+
+--
+si possono eseguire istruzioni anche se la condizione è falsa
+
+```python
+>>> x = 5
+>>> y = 7
+>>> if x == y:
+...     print("x è già uguale a y")
+... else:
+...     print("x è diverso da y")
+...     print("li voglio rendere uguali")
+...     x = y  # assegno il valore di y a x
+...
+x è diverso da y
+li voglio rendere uguali
+>>> x
+7
+```
+
+
     </textarea>
     <script src="js/progress.min.js" type="text/javascript"></script>
     <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
